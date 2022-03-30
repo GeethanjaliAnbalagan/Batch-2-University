@@ -1,0 +1,180 @@
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ git --version
+git version 2.32.0.windows.2
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ git config --global user.name "GeethanjaliAnbalagan"
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ mkdir myFile
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ cd myFile
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/myFile/.git/
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Readme.txt
+        index.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git add index.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Readme.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Readme.txt
+        new file:   index.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Readme.txt
+        new file:   index.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Readme.txt
+        new file:   index.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git commit -m "First Commit"
+[master (root-commit) 2da20a9] First Commit
+ 2 files changed, 9 insertions(+)
+ create mode 100644 Readme.txt
+ create mode 100644 index.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git commit -m "Second Commit"
+[master 9bcee95] Second Commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git log
+commit 9bcee9557b6f1cdb1301815fc97e39f7c5fe93d5 (HEAD -> master)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Wed Mar 30 17:57:56 2022 +0530
+
+    Second Commit
+
+commit 2da20a9478a1698566e362b9a16ad481f6fee436
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Wed Mar 30 17:56:49 2022 +0530
+
+    First Commit
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git help --all
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                  Add file contents to the index
+   am                   Apply a series of patches from a mailbox
+   archive              Create an archive of files from a named tree
+   bisect               Use binary search to find the commit that introduced a bug
+   branch               List, create, or delete branches
+   bundle               Move objects and refs by archive
+   checkout             Switch branches or restore working tree files
+   cherry-pick          Apply the changes introduced by some existing commits
+   citool               Graphical alternative to git-commit
+   clean                Remove untracked files from the working tree
+   clone                Clone a repository into a new directory
+   commit               Record changes to the repository
+   describe             Give an object a human readable name based on an available ref
+   diff                 Show changes between commits, commit and working tree, etc
+   fetch                Download objects and refs from another repository
+   format-patch         Prepare patches for e-mail submission
+   gc                   Cleanup unnecessary files and optimize the local repository
+   gitk                 The Git repository browser
+   grep                 Print lines matching a pattern
+   gui                  A portable graphical interface to Git
+   init                 Create an empty Git repository or reinitialize an existing one
+   log                  Show commit logs
+   maintenance          Run tasks to optimize Git repository data
+   merge                Join two or more development histories together
+:
+--------------------------------------------------------------------------------------
