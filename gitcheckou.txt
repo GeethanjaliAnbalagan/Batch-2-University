@@ -1,0 +1,216 @@
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ cd myFile
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git log
+commit 9bcee9557b6f1cdb1301815fc97e39f7c5fe93d5 (HEAD -> master)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Wed Mar 30 17:57:56 2022 +0530
+
+    Second Commit
+
+commit 2da20a9478a1698566e362b9a16ad481f6fee436
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Wed Mar 30 17:56:49 2022 +0530
+
+    First Commit
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git branch branch-1
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git branch
+  branch-1
+* master
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git branch branch-2
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git branch
+  branch-1
+  branch-2
+* master
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git checkout branch-1
+Switched to branch 'branch-1'
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git status
+On branch branch-1
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git status
+On branch branch-1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git status
+On branch branch-1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git commit -m "branch-1 commit"
+[branch-1 8c69cd3] branch-1 commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git log
+commit 8c69cd380c0c64ff88750dd95e6cb9fdd433b6f0 (HEAD -> branch-1)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Wed Mar 30 18:46:16 2022 +0530
+
+    branch-1 commit
+
+commit 9bcee9557b6f1cdb1301815fc97e39f7c5fe93d5 (master, branch-2)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Wed Mar 30 17:57:56 2022 +0530
+
+    Second Commit
+
+commit 2da20a9478a1698566e362b9a16ad481f6fee436
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Wed Mar 30 17:56:49 2022 +0530
+
+    First Commit
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git checkout branch-1
+Switched to branch 'branch-1'
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (branch-1)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git checkout -b emergency-fix
+Switched to a new branch 'emergency-fix'
+
+Administrator@Sanjith MINGW64 ~/myFile (emergency-fix)
+$ git status
+On branch emergency-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@Sanjith MINGW64 ~/myFile (emergency-fix)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFile (emergency-fix)
+$ git status
+On branch emergency-fix
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFile (emergency-fix)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (emergency-fix)
+$ git checkout master
+Switched to branch 'master'
+M       index.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git merge emergency-fix
+Already up to date.
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git branch -d  emergency-fix
+Deleted branch emergency-fix (was 9bcee95).
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git remote add origin https://github.com/GeethanjaliAnbalagan/Batch-2-University.git
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git push --set-upstream origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 601 bytes | 120.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/GeethanjaliAnbalagan/Batch-2-University/pull/new/master
+remote:
+To https://github.com/GeethanjaliAnbalagan/Batch-2-University.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git push --set-upstream origin branch-1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 171.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch-1' on GitHub by visiting:
+remote:      https://github.com/GeethanjaliAnbalagan/Batch-2-University/pull/new/branch-1
+remote:
+To https://github.com/GeethanjaliAnbalagan/Batch-2-University.git
+ * [new branch]      branch-1 -> branch-1
+Branch 'branch-1' set up to track remote branch 'branch-1' from 'origin'.
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git clone https://github.com/GeethanjaliAnbalagan/Batch-2-University.git
+Cloning into 'Batch-2-University'...
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 13 (delta 1), reused 10 (delta 1), pack-reused 0
+Receiving objects: 100% (13/13), done.
+Resolving deltas: 100% (1/1), done.
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ ls
+Batch-2-University/  index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git checkout branch-1
+error: Your local changes to the following files would be overwritten by checkout:
+        index.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Administrator@Sanjith MINGW64 ~/myFile (master)
+$ git checkout branch-1
